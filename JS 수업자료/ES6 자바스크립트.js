@@ -73,3 +73,18 @@ let persons2 = {
 }
 
 persons2.getInfo() //전역변수, 지역변수를 구분하기 위해서
+
+//this는 나 자신을 불러준 객체
+
+
+let ages =17
+let persons2 = {
+  name :"hege",
+  ages:20,
+  getInfo: function () {
+    console.log(this) //
+}
+
+persons2.getInfo() //라고 검색하면 {name:"hege",age:20,getInfo:[Function]} 으로 출력된다.
+
+//프로그래밍에서 this를 써야되는 상황이 왔으면, 일반함수를 사용해라.
