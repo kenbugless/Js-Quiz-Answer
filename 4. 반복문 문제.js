@@ -51,11 +51,11 @@ console.log(number)
 // 짝짝 
 
 for(let i =1;i<=50;i++) {
-    let stringValue = i.toString(); /* 숫자를 문자를 분리를 해줄 것임. i.toString()에 의미는 숫자를 문자로 바꾸겠다. 39-> 3이랑 9로 인식한다. */
+    let stringValue = i.toString().split(''); /* 숫자를 문자를 분리를 해줄 것임. i.toString()에 의미는 숫자를 문자로 바꾸겠다. 39-> 3이랑 9로 인식한다. */
     let result ="";
     for(let j=0;j<=stringValue.length;j++) {
         if(stringValue[j]=="3" ||stringValue[j]=="6"|| stringValue[j]=="9") {
-            result =result +짝;
+            result =result +"짝";
         } 
     }
     console.log(result.length>0?result:i)
@@ -68,16 +68,16 @@ for(let i =1;i<=50;i++) {
 // 문제 4
 // 주어진 숫자가 소수이면 true 아니면 false를 출력하는 프로그램을 짜시오.
 //소수는 1과 자기 자신을 제외한 모든 자연수로 나누어보면서, 나누어 떨어지는 지 확인해봐야 한다. 
-// let num =12;
-// let isPrime =true;
 
-// if(num === 1) {
-//     isPrime ==false;
-// }
-// for(let i=2 ;i <=13;i++) {
-//     if(num%i==0) {
-//         isPrime =false;
-//     }
-// }
-// console.log(isPrime)
+let num =12;
+let isPrime =true;
+if(num === 1) {
+    isPrime == false;
+}
+for(let i=2 ;i <=13;i++) {
+    if(num%i==0) {
+        isPrime =false;
+    }
+}
+console.log(isPrime)
 

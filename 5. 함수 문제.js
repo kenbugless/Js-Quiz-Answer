@@ -12,20 +12,31 @@
 // greet('에밀리')
 
 
-// 매개변수로 전달받은 이름을 반환하게 함수를 수정하시오
-function greet(name) {
-    console.log(`안녕 내 이름은 ${name}이야`);
-    return name
-}
-    let returnValue = greet('에밀리');
-    console.log(returnValue);
+// // 매개변수로 전달받은 이름을 반환하게 함수를 수정하시오
+// function greet(name,name2) {
+//     console.log(`안녕 내 이름은 ${name},${name2}이야`);
+//     return name+name2 //지영사슴
+// }
 
-
-
-
+// const name3 =greet("지영","사슴"); //const name3 =지영사슴
+// console.log(name3)
 
 //  meetAt 함수를 만들어주세요.
 //      인자를 세개 받습니다.
+
+function meetAt(year,month,date) {
+    if (year&& month && date) { //date만 적어도 된다. date가 있으면 앞에 정보가 있다는 의미이므로,
+        return `${year}/${month}/${date} `
+    }else if (year && month) { //마찬가지로 month만 적어도 된다.
+        return `${year}년 ${month}월`
+    }else if(year) {
+        return `${year}년` 
+    }
+  
+}
+
+console.log(meetAt(2002,1,7))
+
 
 //  첫번째 인자는 년도에 해당하는 숫자입니다.
 //  두번째 인자는 월에 해당하는 숫자입니다.
@@ -41,9 +52,6 @@ function greet(name) {
 //  년도,월,일 인자를 전부 받았을 경우 → 년도,월,일을 조합해서 "1234/5/6" 과 같은 형식의 문자열을
 
 //  리턴 해주세요.
-
-
-
 // 결과 예시
 // meetAt(2022); // 결과 --> 2022년
 
@@ -53,6 +61,20 @@ function greet(name) {
 
 
 // findSmallestElement 함수를 구현해 주세요.
+// function findSmallestElement(arr) {
+//   //어레이가 비어있다.
+//   if(arr.length==0) {
+//     return 0;
+//   } 
+//   let result = arr[0]
+//   for(let i=1;i<=arr.length;i++) {
+//     if(result>arr[i]) {
+//         result = arr[i]
+//     }
+//   }
+//   return result
+// }
+// console.log(findSmallestElement([100,200,3,0,2,1]))
 
 // findSmallestElement 의 arr 인자는 숫자 값으로만 이루어진 배열입니다.
 
@@ -64,9 +86,25 @@ function greet(name) {
 // 이용되는 배열
 // [100,200,3,0,2,1]
 
+
+
+
 // 돈을 매개변수로 받으면 몇개의 지폐와 동전이 필요한지 최소 개수를 계산해주는 함수를 만드시오
 
 // 출력예 )
+
+let unit = [50000,10000,5000,1000,500,100]
+
+function changes(money) {
+    for(let i=0;i<unit.length;i++) {
+        let num = Math.floor(money/unit[i]);
+        console.log(`${unit[i]}*${num}`)
+        money =money -(unit[i]*num)
+    }
+   
+}
+
+console.log(changes(12300))
 
 // 12300인 경우
 //  50000 X 0
