@@ -1,13 +1,15 @@
 // 1. 다음의 코드를 es6 문법을 이용하여 재작성 하시오
 
+//문제 1.
 let name="noona's fruit store"
 let fruits = ["banana","apple","mango"]
 let address="Seoul"
 
-let store = {    name:name,    fruits:fruits,    address:address
-}
-console.log(store)
+// let store = {    name:name,    fruits:fruits,    address:address
+// }
+//console.log(store)
 
+//정답 1.
 let store = {name, fruits, address}
 console.log(store)
 

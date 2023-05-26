@@ -22,6 +22,11 @@ let {name,num} =bts
 console.log(name, num) //방탄소년단, 7 
 
 let array = [1,2,3]
+// let a =array[0]
+// let b = array[1]
+// let c = array[2]
+
+//객체처럼 하자!라고 해서, 이렇게 진화함
 // let [a,b,c] =array;
 // console.log(a,b,c) //1,2,3
 
@@ -44,7 +49,7 @@ let c= [5,6]
 // let result =a.concat(b,c)
 // console.log(result) //[ 1, 2, 3, 4, 5, 6 ]
 
-let result = [...a,...b,...c]
+let result = [...a,...b,...c] //a 있는 내용 전부, b에 있는 내용 전부, c에 있는 내용 전부를 들고 와라
 console.log(result) //[ 1, 2, 3, 4, 5, 6 ]
 
 //함수 선언 방식
@@ -55,6 +60,10 @@ function foo() {
 
 let foo = () => {
   console.log("hello")
+}
+//////////return 생략을 가능케 한다. 
+function foo() {
+  return "haha"
 }
 
 let foo =() => "haha" //return 생략이 가능하다. 함수 안에 문장이 하나면, curly bracket도 생략이 가능하다. 
@@ -68,6 +77,7 @@ let persons2 = {
   name :"hege",
   ages:20,
   getInfo: function () {
+    //console.log(age) //age를 입력하면, 17이 출력이 된다.
     console.log(this.ages) ////this.age를 써주면, 함수 내부에 있는 age를 가지고 온다. 20이 나옴, 그게 아니고 age만 쓰면, 17이 나옴
   }
 }
@@ -82,7 +92,11 @@ let persons2 = {
   name :"hege",
   ages:20,
   getInfo: function () {
-    console.log(this) //
+    console.log(this.ages) //단순하게 this를 쓰면, name: "hege" , age "20", getInfo :[Function]가 나온다.
+
+  // getInfo: () => {
+  //   console.log(this.ages) => 화살표 함수는 this를 불러올 수가 없다. 
+  }  
 }
 
 persons2.getInfo() //라고 검색하면 {name:"hege",age:20,getInfo:[Function]} 으로 출력된다.

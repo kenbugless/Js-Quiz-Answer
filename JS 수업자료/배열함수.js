@@ -14,12 +14,13 @@ let names = ["Steven Paul Jobs",
 for(let i=0;i<=names.length;i++) {
   console.log(names[i])
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function printName(item) {
   console.log(item)
 }
 
-names.forEach(printName)
+names.forEach(printName) 
+//forEach(함수)를 받는다.
 //모든 배열함수가 함수를 매개변수로 받는다. forEach(함수명)
 //printName(item) item일 필요는 없지만, 그냥 item이라고 적어준거임
 //printName이 다른 데 쓰이지 않는 것으로 확인이 됨으로, 
